@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import  *  as  todoListData  from  "src/app/mockJson/toDoList.json";
-import  *  as  doneListData  from  "src/app/mockJson/doneList.json";
+import  *  as  todoListData  from  "src/assets/mockJson/toDoList.json";
+import  *  as  doneListData  from  "src/assets/mockJson/doneList.json";
 @Injectable({
   providedIn: 'root'
 })
