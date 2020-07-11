@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+.borderClass {
+    border: 1px solid gray;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 1rem;
+    margin: 2rem 1rem;
+    height: 421px;
+    overflow-y: scroll;
+}
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    opacity: 1;
+    pointer-events: auto;
+}
+.taskDescription {
+    text-transform: capitalize;
+    margin: 0em;
+    color: #969896;
+    overflow: hidden;    
+    padding-left: 0.5rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 80%;
+}
+.taskName {
+    text-transform: capitalize;
+    margin: 0em;
+    color: #4c4e4c;;
+}

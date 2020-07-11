@@ -1,0 +1,40 @@
+<div class="borderClass">
+    <blockquote>
+        Create ToDo Task
+    </blockquote>
+    <div class="row">
+        <form class="col s12" [formGroup]="taskForm" (focusout)="submitForm(taskForm)">
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="task_name" type="text" data-length="10" formControlName="taskName" required>
+                <label for="task_name">Task name<span class="requiredMessage">*</span></label>
+                <span class="requiredMessage" *ngIf="taskForm.controls.taskName.invalid && (taskForm.controls.taskName.dirty || taskForm.controls.taskName.touched) && taskForm.controls.taskName.errors.required">
+                    Task Name is required.
+                </span>
+              </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea id="task_description" class="materialize-textarea" formControlName="taskDescription" required></textarea>
+                    <label for="task_description">Task Description<span class="requiredMessage">*</span></label>
+                    <span class="requiredMessage" *ngIf="taskForm.controls.taskDescription.invalid && (taskForm.controls.taskDescription.dirty || taskForm.controls.taskDescription.touched) && taskForm.controls.taskDescription.errors.required">
+                        Task Description is required.
+                    </span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <select id="repeat_task" class="browser-default" formControlName="taskRepetation" required>
+                      <option value="" disabled selected>Choose one option...</option>
+                      <option value="true">Yes</option>
+                      <option value="false">No</option>
+                    </select>
+                    <label class="labelStyle" for="repeat_task">Repeating Task<span class="requiredMessage">*</span></label>
+                    <span class="requiredMessage" *ngIf="taskForm.controls.taskRepetation.invalid && (taskForm.controls.taskRepetation.dirty || taskForm.controls.taskRepetation.touched) && taskForm.controls.taskRepetation.errors.required">
+                        Task Repetation Status is required.
+                    </span>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

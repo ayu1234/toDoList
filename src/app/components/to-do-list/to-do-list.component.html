@@ -1,0 +1,22 @@
+<div class="borderClass">
+    <blockquote>
+        ToDo List
+    </blockquote>
+    <table class="striped">
+        <thead>
+          <tr>
+              <th>Status</th>
+              <th colspan="3">Task Details</th>
+          </tr>
+        </thead>    
+        <tbody>
+          <tr *ngFor= "let data of listData">
+            <td> <input type="checkbox" class="filled-in" [checked]="data.done" (change) = "changeStatus(data)" /></td>
+            <td>
+                <p class="taskName">{{data.task_name}}</p>
+                <p class="taskDescription">{{data.task_description}}</p>
+            </td>
+          </tr>
+        </tbody>
+    </table>
+</div>
